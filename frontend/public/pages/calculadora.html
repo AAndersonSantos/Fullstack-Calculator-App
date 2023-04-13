@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/calculadoraStyle.css">
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <form id="myFormName">
+        <div class="container-header">
+            <div class="content-first">
+                <input class="input-name" type="text" name="nome" placeholder="Digite seu nome">
+                <p hidden class="msg-error">*Preencha o campo nome</p>
+            </div>
+            
+            <a href="http://localhost:8081/resultados">Resultados</a>
+        </div>
+
+        <article class="article-calculo">
+            <section>
+                <input type="text" name="calculo" id="calc">
+                <div class="line"></div>
+                <input type="text" name="resultado" id="result">
+            </section>
+            
+            <input type="button" value="C" onclick="clr()" id="clear">
+        </article>
+
+        <table>
+            <tr>
+                <td><input type="button" value="1" onclick="num('1')"></td>
+                <td><input type="button" value="2" onclick="num('2')"></td>
+                <td><input type="button" value="3" onclick="num('3')"></td>
+                <td><input class="op" type="button" value="/" onclick="num('/')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="4" onclick="num('4')"></td>
+                <td><input type="button" value="5" onclick="num('5')"></td>
+                <td><input type="button" value="6" onclick="num('6')"></td>
+                <td><input class="op" type="button" value="-" onclick="num('-')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="7" onclick="num('7')"></td>
+                <td><input type="button" value="8" onclick="num('8')"></td>
+                <td><input type="button" value="9" onclick="num('9')"></td>
+                <td><input class="op" type="button" value="+" onclick="num('+')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="," onclick="num(',')"></td>
+                <td><input type="button" value="0" onclick="num('0')"></td>
+                <td><input class="op" type="submit" value="=" onclick="calculation()"></td>
+                <td><input class="op" type="button" value="*" onclick="num('*')"></td>
+            </tr>
+
+            <tr>
+                <td><input type="button" value="(" onclick="num('(')"></td>
+                <td><input type="button" value=")" onclick="num(')')"></td>
+            </tr>
+        </table>
+    </form>
+
+    <footer>
+        <p>Desenvolvido por @Anderson Santos</p>
+    </footer>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="../js/calculadora.js" defer></script>
+
+</html>
